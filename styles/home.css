@@ -320,7 +320,7 @@ body {
   background-color: #222;
 }
 
-/* ✅ Responsive at 770px */
+/* Responsive at 770px */
 
 @media (max-width: 850px) {
   .newsletter-section {
