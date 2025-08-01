@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Title and Icon -->
+    <title>
+      Instant Japanese Miso Soup | Chili Miso Soup | Buy Online- Abokichi
+    </title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/src/image/logos/Logo_only.png"
+    />
+    <link rel="stylesheet" href="/styles/header.css" />
+    <link rel="stylesheet" href="/styles/footer.css" />
+    <link rel="stylesheet" href="/styles/product-card.css" />
+    <link rel="stylesheet" href="/styles/products.css" />
+    <!-- Font Awesome for the location icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <!-- Top Bar -->
+      <div class="head-area">
+        <div class="left-section">
+          <select class="currency-select">
+            <option value="usd">USD</option>
+            <option value="inr">Rupee</option>
+            <option value="eur">Euro</option>
+            <option value="yen">Yen</option>
+          </select>
+          <a
+            class="store"
+            href="https://www.google.com/maps/place/Abokichi/"
+            target="_blank"
+          >
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Store</span>
+          </a>
+        </div>
+        <div class="right-section">
+          <button>Login / Register</button>
+        </div>
+      </div>
+
+      <!-- Main Header -->
+      <div class="head-main">
+        <div class="head-left">
+          <a href="/templates/home.html"><div class="logo-sprite"></div></a>
+        </div>
+
+        <div class="head-center">
+          <div class="dropdown">
+            <button class="dropdown-btn">
+              Shop
+              <img
+                src="/src/image/logos/down-arrow.png"
+                alt="Dropdown Icon"
+                class="dropdown-icon"
+              />
+            </button>
+            <div class="dropdown-content">
+              <a href="#">Product 1</a>
+              <a href="#">Product 2</a>
+              <a href="#">Product 3</a>
+              <a href="#">Product 4</a>
+            </div>
+          </div>
+          <button>Our story</button>
+          <button>Recipes</button>
+          <button>Contact</button>
+        </div>
+
+        <div class="head-right">
+          <img
+            src="/src/image/logos/search-interface-symbol.png"
+            alt="Search Icon"
+          />
+          <img src="/src/image/logos/heart.png" alt="Heart Icon" />
+          <img src="/src/image/logos/shopping-bag.png" alt="Cart Icon" />
+        </div>
+
+        <!-- Toggle Button (Right Side) -->
+        <button class="toggle-btn" onclick="toggleMenu()">
+          <img src="/src/image/logos/toggle.png" alt="Toggle Menu" />
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="mobile-menu" id="mobileMenu">
+        <div class="dropdown">
+          <button class="dropdown-btn">
+            Shop
+            <img
+              src="/src/image/logos/down-arrow.png"
+              alt="Dropdown Icon"
+              class="dropdown-icon"
+            />
+          </button>
+          <div class="dropdown-content">
+            <a href="#">Product 1</a>
+            <a href="#">Product 2</a>
+            <a href="#">Product 3</a>
+            <a href="#">Product 4</a>
+          </div>
+        </div>
+        <button>Our story</button>
+        <button>Recipes</button>
+        <button>Contact</button>
+        <div class="head-right">
+          <img
+            src="/src/image/logos/search-interface-symbol.png"
+            alt="Search Icon"
+          />
+          <img src="/src/image/logos/heart.png" alt="Heart Icon" />
+          <img src="/src/image/logos/shopping-bag.png" alt="Cart Icon" />
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="products-header">
+        <div class="products-hero">
+          <div class="hero-overlay">
+            <h1>PRODUCTS</h1>
+          </div>
+        </div>
+
+        <div class="product-counter">
+          <h2 class="products-count">Products (48)</h2>
+        </div>
+
+        <section class="products-toolbar-wrapper">
+          <div class="products-toolbar-left">
+            <!-- Filter Button -->
+            <button class="filter-button" id="filterBtn">
+              <img
+                src="/src/image/logos/filter.png"
+                alt="Filter Icon"
+                id="filterIcon"
+              />
+              <span>Filter</span>
+            </button>
+
+            <div class="view-toggle">
+              <img src="/src/image/logos/grid.png" alt="Grid View" />
+              <img src="/src/image/logos/list.png" alt="List View" />
+            </div>
+          </div>
+
+          <div class="products-toolbar-right">
+            <label for="sort">Sort By:</label>
+            <select id="sort">
+              <option value="az">Alphabetically, A-Z</option>
+              <option value="za">Alphabetically, Z-A</option>
+              <option value="price-low">Price, Low to High</option>
+              <option value="price-high">Price, High to Low</option>
+              <option value="rating-high">Rating, High to Low</option>
+              <option value="rating-low">Rating, Low to High</option>
+            </select>
+
+            <img
+              src="/src/image/logos/down-arrow.png"
+              alt="Dropdown Icon"
+              class="dropdown-icon"
+            />
+          </div>
+        </section>
+        <hr
+          style="border-top: 1.5px solid black; width: 92%; margin-bottom: 40px"
+        />
+      </section>
+
+      <!-- Filter Section (hidden by default) -->
+      <section class="filter-section hidden" id="filterPanel">
+        <div class="filter-column">
+          <h3 class="filter-heading">Categories</h3>
+          <ul class="filter-list">
+            <li>
+              <label
+                ><input
+                  type="checkbox"
+                  data-filter="category"
+                  value="Chili oil"
+                />
+                Chili oil</label
+              >
+            </li>
+            <li>
+              <label
+                ><input
+                  type="checkbox"
+                  data-filter="category"
+                  value="Miso Soup"
+                />
+                Miso Soup</label
+              >
+            </li>
+            <li>
+              <label
+                ><input
+                  type="checkbox"
+                  data-filter="category"
+                  value="Instant Matcha"
+                />
+                Instant Matcha</label
+              >
+            </li>
+            <li>
+              <label
+                ><input type="checkbox" data-filter="category" value="Coffee" />
+                Coffee</label
+              >
+            </li>
+            <li>
+              <label
+                ><input
+                  type="checkbox"
+                  data-filter="category"
+                  value="Greeting Card"
+                />
+                Greeting Card</label
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="filter-column">
+          <h3 class="filter-heading">Type</h3>
+          <ul class="filter-list">
+            <li>
+              <label
+                ><input type="checkbox" data-filter="type" value="condiment" />
+                Single Pack</label
+              >
+            </li>
+            <li>
+              <label
+                ><input type="checkbox" data-filter="type" value="bundle" />
+                Multi Set</label
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="filter-column">
+          <h3 class="filter-heading">Flavours</h3>
+          <ul class="filter-list">
+            <li>
+              <label
+                ><input type="checkbox" data-filter="flavour" value="Sweet" />
+                Sweet</label
+              >
+            </li>
+            <li>
+              <label
+                ><input type="checkbox" data-filter="flavour" value="Salt" />
+                Salt</label
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="best-sellers">
+        <div class="product-grid">
+          <a href="/templates/product-detail.html">
+            <div
+              class="product-card"
+              data-price="135"
+              data-rating="5"
+              data-type="bundle"
+              data-category="Chili oil"
+              data-flavour="Salt"
+            >
+              <img
+                src="/src/image/products/OKAZU-lovers-set.webp"
+                alt="OKAZU Lovers Set"
+              />
+              <p class="product-title">OKAZU Lovers Set (230mL/12 jars)</p>
+              <p class="price">
+                <strong>$135.00</strong> <span class="old-price">$167.88</span>
+              </p>
+              <div class="rating">
+                <img
+                  src="/src/image/stars/full-star.png"
+                  alt="star"
+                  class="star"
+                />
+                <img
+                  src="/src/image/stars/full-star.png"
+                  alt="star"
+                  class="star"
+                />
+                <img
+                  src="/src/image/stars/full-star.png"
+                  alt="star"
+                  class="star"
+                />
+                <img
+                  src="/src/image/stars/full-star.png"
+                  alt="star"
+                  class="star"
+                />
+                <img
+                  src="/src/image/stars/full-star.png"
+                  alt="star"
+                  class="star"
+                />
+                <span>32 Reviews</span>
+              </div>
+            </div>
+          </a>
+
+          <div
+            class="product-card"
+            data-price="34"
+            data-rating="2"
+            data-type="condiment"
+            data-category="Instant Matcha"
+            data-flavour="Sweet"
+          >
+            <img src="/src/image/products/ABO-Matcha.webp" alt="ABO Matcha" />
+            <p class="product-title">
+              ABO Matcha: Uji matcha, Organic, Ceremonial grade
+            </p>
+            <p class="price"><strong>$34.00</strong></p>
+            <div class="rating">
+              <img
+                src="/src/image/stars/full-star.png"
+                alt="star"
+                class="star"
+              />
+              <img
+                src="/src/image/stars/full-star.png"
+                alt="star"
+                class="star"
+              />
+              <img
+                src="/src/image/stars/empty-star.png"
+                alt="star"
+                class="star"
+              />
+              <img
+                src="/src/image/stars/empty-star.png"
+                alt="star"
+                class="star"
+              />
+              <img
+                src="/src/image/stars/empty-star.png"
+                alt="star"
+                class="star"
+              />
+              <span>24 Reviews</span>
+            </div>
+          </div>
+
+          <div
+            class="product-card"
+            data-price="19.99"
+            data-rating="3"
+            data-type="bundle"
+            data-category="Miso Soup"
+            data-flavour="Sweet"
+          >
+            <img
+              src="/src/image/products/3-FlavourMisoSoup.webp"
+              alt="Miso Soup Set"
+            />
+            <p class="product-title">Instant Miso Soup Tasting Set</p>
+            <p class="price">
+              <strong>$19.99</strong> <span class="old-price">$24.00</span>
+            </p>
+            <div class="rating">
+              <img
+                src="/src/image/stars/full-star.png"
+                alt="star"
+                class="star"
+              />
+              <img
+                src="/src/image/stars/full-star.png"
+                alt="star"
+                class="star"
+              />
+              <img
+                src="/src/image/stars/full-star.png"
+                alt="star"
+                class="star"
+              />
+              <img
+                src="/src/image/stars/empty-star.png"
+                alt="star"
+                class="star"
+              />
+              <img
+                src="/src/image/stars/empty-star.png"
+                alt="star"
+                class="star"
+              />
+              <span>12 Reviews</span>
+            </div>
+          </div>
+
+          <div
+            class="product-card"
+            data-price="13.99"
+            data-rating="1"
+            data-type="condiment"
+            data-category="Chili oil"
+            data-flavour="Salt"
+          >
+            <img
+              src="/src/image/products/Chili_miso_250ml_1.webp"
+              alt="OKAZU CHILI MISO"
+            />
+            <p class="product-title">
+              OKAZU - CHILI MISO - Japanese miso chili oil condiment (230ml)
+            </p>
+            <p class="price"><strong>$13.99</strong></p>
+            <div class="rating">
+              <img
+                src="/src/image/stars/full-star.png"
+                alt="star"
+                class="star"
+              />
+              <img
+                src="/src/image/stars/empty-star.png"
+                alt="star"
+                class="star"
+              />
+              <img
+                src="/src/image/stars/empty-star.png"
+                alt="star"
+                class="star"
+              />
+              <img
+                src="/src/image/stars/empty-star.png"
+                alt="star"
+                class="star"
+              />
+              <img
+                src="/src/image/stars/empty-star.png"
+                alt="star"
+                class="star"
+              />
+              <span>18 Reviews</span>
+            </div>
+          </div>
+
+          <div
+            class="product-card"
+            data-price="34"
+            data-rating="2"
+            data-type="condiment"
+            data-category="Instant Matcha"
+            data-flavour="Sweet"
+          >
+            <img src="/src/image/products/ABO-Matcha.webp" alt="ABO Matcha" />
+            <p class="product-title">
+              ABO Matcha: Uji matcha, Organic, Ceremonial grade
+            </p>
+            <p class="price"><strong>$34.00</strong></p>
+            <div class="rating">
+              <img
+                src="/src/image/stars/full-star.png"
+                alt="star"
+                class="star"
+              />
+              <img
+                src="/src/image/stars/full-star.png"
+                alt="star"
+                class="star"
+              />
+              <img
+                src="/src/image/stars/empty-star.png"
+                alt="star"
+                class="star"
+              />
+              <img
+                src="/src/image/stars/empty-star.png"
+                alt="star"
+                class="star"
+              />
+              <img
+                src="/src/image/stars/empty-star.png"
+                alt="star"
+                class="star"
+              />
+              <span>24 Reviews</span>
+            </div>
+          </div>
+
+          <a
+            ><div
+              class="product-card"
+              data-price="135"
+              data-rating="5"
+              data-type="bundle"
+              data-category="Chili oil"
+              data-flavour="Salt"
+            >
+              <img
+                src="/src/image/products/OKAZU-lovers-set.webp"
+                alt="OKAZU Lovers Set"
+              />
+              <p class="product-title">OKAZU Lovers Set (230mL/12 jars)</p>
+              <p class="price">
+                <strong>$135.00</strong> <span class="old-price">$167.88</span>
+              </p>
+              <div class="rating">
+                <img
+                  src="/src/image/stars/full-star.png"
+                  alt="star"
+                  class="star"
+                />
+                <img
+                  src="/src/image/stars/full-star.png"
+                  alt="star"
+                  class="star"
+                />
+                <img
+                  src="/src/image/stars/full-star.png"
+                  alt="star"
+                  class="star"
+                />
+                <img
+                  src="/src/image/stars/full-star.png"
+                  alt="star"
+                  class="star"
+                />
+                <img
+                  src="/src/image/stars/full-star.png"
+                  alt="star"
+                  class="star"
+                />
+                <span>32 Reviews</span>
+              </div>
+            </div>
+          </a>
+
+          <div
+            class="product-card"
+            data-price="34"
+            data-rating="2"
+            data-type="condiment"
+            data-category="Instant Matcha"
+            data-flavour="Sweet"
+          >
+            <img src="/src/image/products/ABO-Matcha.webp" alt="ABO Matcha" />
+            <p class="product-title">
+              ABO Matcha: Uji matcha, Organic, Ceremonial grade
+            </p>
+            <p class="price"><strong>$34.00</strong></p>
+            <div class="rating">
+              <img
+                src="/src/image/stars/full-star.png"
+                alt="star"
+                class="star"
+              />
+              <img
+                src="/src/image/stars/full-star.png"
+                alt="star"
+                class="star"
+              />
+              <img
+                src="/src/image/stars/empty-star.png"
+                alt="star"
+                class="star"
+              />
+              <img
+                src="/src/image/stars/empty-star.png"
+                alt="star"
+                class="star"
+              />
+              <img
+                src="/src/image/stars/empty-star.png"
+                alt="star"
+                class="star"
+              />
+              <span>24 Reviews</span>
+            </div>
+          </div>
+
+          <div
+            class="product-card"
+            data-price="19.99"
+            data-rating="3"
+            data-type="bundle"
+            data-category="Miso Soup"
+            data-flavour="Sweet"
+          >
+            <img
+              src="/src/image/products/3-FlavourMisoSoup.webp"
+              alt="Miso Soup Set"
+            />
+            <p class="product-title">Instant Miso Soup Tasting Set</p>
+            <p class="price">
+              <strong>$19.99</strong> <span class="old-price">$24.00</span>
+            </p>
+            <div class="rating">
+              <img
+                src="/src/image/stars/full-star.png"
+                alt="star"
+                class="star"
+              />
+              <img
+                src="/src/image/stars/full-star.png"
+                alt="star"
+                class="star"
+              />
+              <img
+                src="/src/image/stars/full-star.png"
+                alt="star"
+                class="star"
+              />
+              <img
+                src="/src/image/stars/empty-star.png"
+                alt="star"
+                class="star"
+              />
+              <img
+                src="/src/image/stars/empty-star.png"
+                alt="star"
+                class="star"
+              />
+              <span>12 Reviews</span>
+            </div>
+          </div>
+
+          <a
+            ><div
+              class="product-card"
+              data-price="135"
+              data-rating="5"
+              data-type="bundle"
+              data-category="Chili oil"
+              data-flavour="Salt"
+            >
+              <img
+                src="/src/image/products/OKAZU-lovers-set.webp"
+                alt="OKAZU Lovers Set"
+              />
+              <p class="product-title">OKAZU Lovers Set (230mL/12 jars)</p>
+              <p class="price">
+                <strong>$135.00</strong> <span class="old-price">$167.88</span>
+              </p>
+              <div class="rating">
+                <img
+                  src="/src/image/stars/full-star.png"
+                  alt="star"
+                  class="star"
+                />
+                <img
+                  src="/src/image/stars/full-star.png"
+                  alt="star"
+                  class="star"
+                />
+                <img
+                  src="/src/image/stars/full-star.png"
+                  alt="star"
+                  class="star"
+                />
+                <img
+                  src="/src/image/stars/full-star.png"
+                  alt="star"
+                  class="star"
+                />
+                <img
+                  src="/src/image/stars/full-star.png"
+                  alt="star"
+                  class="star"
+                />
+                <span>32 Reviews</span>
+              </div>
+            </div>
+          </a>
+
+          <div
+            class="product-card"
+            data-price="34"
+            data-rating="2"
+            data-type="condiment"
+            data-category="Instant Matcha"
+            data-flavour="Sweet"
+          >
+            <img src="/src/image/products/ABO-Matcha.webp" alt="ABO Matcha" />
+            <p class="product-title">
+              ABO Matcha: Uji matcha, Organic, Ceremonial grade
+            </p>
+            <p class="price"><strong>$34.00</strong></p>
+            <div class="rating">
+              <img
+                src="/src/image/stars/full-star.png"
+                alt="star"
+                class="star"
+              />
+              <img
+                src="/src/image/stars/full-star.png"
+                alt="star"
+                class="star"
+              />
+              <img
+                src="/src/image/stars/empty-star.png"
+                alt="star"
+                class="star"
+              />
+              <img
+                src="/src/image/stars/empty-star.png"
+                alt="star"
+                class="star"
+              />
+              <img
+                src="/src/image/stars/empty-star.png"
+                alt="star"
+                class="star"
+              />
+              <span>24 Reviews</span>
+            </div>
+          </div>
+
+          <div
+            class="product-card"
+            data-price="19.99"
+            data-rating="3"
+            data-type="bundle"
+            data-category="Miso Soup"
+            data-flavour="Sweet"
+          >
+            <img
+              src="/src/image/products/3-FlavourMisoSoup.webp"
+              alt="Miso Soup Set"
+            />
+            <p class="product-title">Instant Miso Soup Tasting Set</p>
+            <p class="price">
+              <strong>$19.99</strong> <span class="old-price">$24.00</span>
+            </p>
+            <div class="rating">
+              <img
+                src="/src/image/stars/full-star.png"
+                alt="star"
+                class="star"
+              />
+              <img
+                src="/src/image/stars/full-star.png"
+                alt="star"
+                class="star"
+              />
+              <img
+                src="/src/image/stars/full-star.png"
+                alt="star"
+                class="star"
+              />
+              <img
+                src="/src/image/stars/empty-star.png"
+                alt="star"
+                class="star"
+              />
+              <img
+                src="/src/image/stars/empty-star.png"
+                alt="star"
+                class="star"
+              />
+              <span>12 Reviews</span>
+            </div>
+          </div>
+
+          <div
+            class="product-card"
+            data-price="13.99"
+            data-rating="1"
+            data-type="condiment"
+            data-category="Chili oil"
+            data-flavour="Salt"
+          >
+            <img
+              src="/src/image/products/Chili_miso_250ml_1.webp"
+              alt="OKAZU CHILI MISO"
+            />
+            <p class="product-title">
+              OKAZU - CHILI MISO - Japanese miso chili oil condiment (230ml)
+            </p>
+            <p class="price"><strong>$13.99</strong></p>
+            <div class="rating">
+              <img
+                src="/src/image/stars/full-star.png"
+                alt="star"
+                class="star"
+              />
+              <img
+                src="/src/image/stars/empty-star.png"
+                alt="star"
+                class="star"
+              />
+              <img
+                src="/src/image/stars/empty-star.png"
+                alt="star"
+                class="star"
+              />
+              <img
+                src="/src/image/stars/empty-star.png"
+                alt="star"
+                class="star"
+              />
+              <img
+                src="/src/image/stars/empty-star.png"
+                alt="star"
+                class="star"
+              />
+              <span>18 Reviews</span>
+            </div>
+          </div>
+
+          <div
+            class="product-card"
+            data-price="34"
+            data-rating="2"
+            data-type="condiment"
+            data-category="Instant Matcha"
+            data-flavour="Sweet"
+          >
+            <img src="/src/image/products/ABO-Matcha.webp" alt="ABO Matcha" />
+            <p class="product-title">
+              ABO Matcha: Uji matcha, Organic, Ceremonial grade
+            </p>
+            <p class="price"><strong>$34.00</strong></p>
+            <div class="rating">
+              <img
+                src="/src/image/stars/full-star.png"
+                alt="star"
+                class="star"
+              />
+              <img
+                src="/src/image/stars/full-star.png"
+                alt="star"
+                class="star"
+              />
+              <img
+                src="/src/image/stars/empty-star.png"
+                alt="star"
+                class="star"
+              />
+              <img
+                src="/src/image/stars/empty-star.png"
+                alt="star"
+                class="star"
+              />
+              <img
+                src="/src/image/stars/empty-star.png"
+                alt="star"
+                class="star"
+              />
+              <span>24 Reviews</span>
+            </div>
+          </div>
+
+          <div
+            class="product-card"
+            data-price="13.99"
+            data-rating="1"
+            data-type="condiment"
+            data-category="Chili oil"
+            data-flavour="Salt"
+          >
+            <img
+              src="/src/image/products/Chili_miso_250ml_1.webp"
+              alt="OKAZU CHILI MISO"
+            />
+            <p class="product-title">
+              OKAZU - CHILI MISO - Japanese miso chili oil condiment (230ml)
+            </p>
+            <p class="price"><strong>$13.99</strong></p>
+            <div class="rating">
+              <img
+                src="/src/image/stars/full-star.png"
+                alt="star"
+                class="star"
+              />
+              <img
+                src="/src/image/stars/empty-star.png"
+                alt="star"
+                class="star"
+              />
+              <img
+                src="/src/image/stars/empty-star.png"
+                alt="star"
+                class="star"
+              />
+              <img
+                src="/src/image/stars/empty-star.png"
+                alt="star"
+                class="star"
+              />
+              <img
+                src="/src/image/stars/empty-star.png"
+                alt="star"
+                class="star"
+              />
+              <span>18 Reviews</span>
+            </div>
+          </div>
+
+          <div
+            class="product-card"
+            data-price="34"
+            data-rating="2"
+            data-type="condiment"
+            data-category="Instant Matcha"
+            data-flavour="Sweet"
+          >
+            <img src="/src/image/products/ABO-Matcha.webp" alt="ABO Matcha" />
+            <p class="product-title">
+              ABO Matcha: Uji matcha, Organic, Ceremonial grade
+            </p>
+            <p class="price"><strong>$34.00</strong></p>
+            <div class="rating">
+              <img
+                src="/src/image/stars/full-star.png"
+                alt="star"
+                class="star"
+              />
+              <img
+                src="/src/image/stars/full-star.png"
+                alt="star"
+                class="star"
+              />
+              <img
+                src="/src/image/stars/empty-star.png"
+                alt="star"
+                class="star"
+              />
+              <img
+                src="/src/image/stars/empty-star.png"
+                alt="star"
+                class="star"
+              />
+              <img
+                src="/src/image/stars/empty-star.png"
+                alt="star"
+                class="star"
+              />
+              <span>24 Reviews</span>
+            </div>
+          </div>
+
+          <div
+            class="product-card"
+            data-price="19.99"
+            data-rating="3"
+            data-type="bundle"
+            data-category="Miso Soup"
+            data-flavour="Sweet"
+          >
+            <img
+              src="/src/image/products/3-FlavourMisoSoup.webp"
+              alt="Miso Soup Set"
+            />
+            <p class="product-title">Instant Miso Soup Tasting Set</p>
+            <p class="price">
+              <strong>$19.99</strong> <span class="old-price">$24.00</span>
+            </p>
+            <div class="rating">
+              <img
+                src="/src/image/stars/full-star.png"
+                alt="star"
+                class="star"
+              />
+              <img
+                src="/src/image/stars/full-star.png"
+                alt="star"
+                class="star"
+              />
+              <img
+                src="/src/image/stars/full-star.png"
+                alt="star"
+                class="star"
+              />
+              <img
+                src="/src/image/stars/empty-star.png"
+                alt="star"
+                class="star"
+              />
+              <img
+                src="/src/image/stars/empty-star.png"
+                alt="star"
+                class="star"
+              />
+              <span>12 Reviews</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer-container">
+      <!-- Left Section -->
+      <div class="footer-left">
+        <div class="footer-links">
+          <p class="footer-heading">LINKS</p>
+          <ul class="footer-list">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Customer Service</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Sitemap</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-info">
+          <p class="footer-heading">INFORMATION</p>
+          <ul class="footer-list">
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Refund Policy</a></li>
+            <li><a href="#">Press</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Right Section -->
+      <div class="footer-right">
+        <div class="payment-icons">
+          <img
+            src="/src/image/logos/visa.png"
+            alt="Visa"
+            class="payment-icon"
+          />
+          <img
+            src="/src/image/logos/mastercard.webp"
+            alt="MasterCard"
+            class="payment-icon"
+          />
+          <img
+            src="/src/image/logos/apple-pay.png"
+            alt="Apple Pay"
+            class="payment-icon"
+          />
+          <img
+            src="/src/image/logos/american.png"
+            alt="American Express"
+            class="payment-icon"
+          />
+        </div>
+      </div>
+
+      <!-- Footer bottom section -->
+      <div class="footer-bottom">
+        <div class="footer-left-icons">
+          <img src="/src/image/logos/facebook.png" alt="Facebook" />
+          <img src="/src/image/logos/twitter.png" alt="Twitter" />
+          <img src="/src/image/logos/instagram.png" alt="Instagram" />
+          <img id="youtube" src="/src/image/logos/youtube.png" alt="YouTube" />
+          <img src="/src/image/logos/pinterest.png" alt="Pinterest" />
+          <img src="/src/image/logos/linkedin.png" alt="LinkedIn" />
+        </div>
+        <div class="footer-right-copy">
+          <img
+            src="/src/image/logos/copyright.png"
+            alt="Copyright"
+            class="copy-icon"
+          />
+          <span>2021 Abokichi.</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/scripts/filter.js"></script>
+    <script src="/scripts/home.js"></script>
+  </body>
+</html>

@@ -1,0 +1,195 @@
+body {
+  background-color: #f5f5f5;
+  font-family: "Raleway", sans-serif;
+}
+
+.products-hero {
+  background-image: url("/src/image/products/banner-food.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.6); /* Black with 50% opacity */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.products-hero h1 {
+  font-size: 25px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.products-toolbar-wrapper {
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.products-toolbar-left {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.product-counter {
+  margin-left: 3%;
+}
+
+.products-count {
+  color: #000;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+  border-left: 4px solid #0c3322;
+  padding-left: 10px;
+}
+
+.filter-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #000;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.filter-button img {
+  width: 25px;
+  height: 20px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* filter section styling */
+.filter-section {
+  display: flex;
+  gap: 50px;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 4px;
+  max-width: 80%;
+  width: 100%;
+  margin: 30px auto;
+  justify-content: center;
+}
+
+.filter-column {
+  flex: 1;
+}
+
+.filter-heading {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1c3c2d;
+  border-left: 4px solid #1c3c2d;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+
+.filter-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.filter-list li {
+  margin-bottom: 14px;
+}
+
+.filter-list input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+  accent-color: #1c3c2d;
+}
+
+.filter-list label {
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+}
+
+.filter-button {
+  border: 1px solid black;
+  padding: 10px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.filter-button.active {
+  background-color: white;
+  color: black;
+}
+
+.view-toggle {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-left: 2px solid #ccc;
+  padding-left: 16px;
+}
+
+.view-toggle img {
+  width: 24px;
+  height: 24px;
+  opacity: 0.7;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.view-toggle img:hover {
+  opacity: 1;
+}
+
+.products-toolbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  color: #000;
+}
+
+.products-toolbar-right label {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.products-toolbar-right select {
+  padding: 8px 12px;
+  font-size: 15px;
+  border: none;
+  background-color: transparent;
+  appearance: none;
+  cursor: pointer;
+}
+
+#sort {
+  margin-left: 30px;
+  margin-right: -12px;
+}

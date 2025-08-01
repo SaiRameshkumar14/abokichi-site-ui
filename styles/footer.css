@@ -1,0 +1,135 @@
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #ebf2ef;
+  padding-top: 10px;
+}
+
+.footer-left {
+  padding-left: 10%;
+  display: flex;
+  gap: 80px;
+}
+
+.footer-heading {
+  color: #0c3322;
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.footer-list li {
+  margin-bottom: 15px;
+}
+
+.footer-list a {
+  text-decoration: none;
+  color: #888;
+  font-size: 16px;
+}
+
+.footer-right {
+  display: flex;
+  align-items: flex-end;
+  padding-right: 2%;
+}
+
+.payment-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.payment-icon {
+  width: 70px;
+  height: auto;
+}
+
+/* ------------------------------ Footer Bottom */
+
+.footer-bottom {
+  background-color: #0c3322;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 22px 4rem;
+  width: 100%;
+}
+
+.footer-left-icons img {
+  width: 20px;
+  height: 20px;
+  margin-right: 15px;
+  filter: brightness(0) invert(1);
+  cursor: pointer;
+}
+
+#youtube {
+  width: 25px;
+  height: 15px;
+}
+
+.footer-right-copy {
+  display: flex;
+  align-items: center;
+}
+
+.footer-right-copy .copy-icon {
+  width: 13px;
+  height: 13px;
+  margin-right: 8px;
+}
+
+.footer-right-copy span {
+  color: white;
+  font-size: 17px;
+  font-weight: 100;
+}
+
+/* ------------------------------ Responsive */
+
+@media screen and (max-width: 770px) {
+  .footer-container {
+    align-items: flex-start;
+  }
+
+  .footer-left {
+    gap: 25%;
+    padding-left: 10%;
+    width: 100%;
+  }
+
+  .footer-right {
+    justify-content: center;
+    padding: 20px 0 0;
+    width: 100%;
+  }
+
+  .payment-icons {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 10px;
+  }
+
+  .footer-left-icons {
+    margin-bottom: 10px;
+  }
+
+  .footer-right-copy {
+    justify-content: flex-start;
+  }
+}

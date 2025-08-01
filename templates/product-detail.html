@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Title and Icon -->
+    <title>
+      Instant Japanese Miso Soup | Chili Miso Soup | Buy Online- Abokichi
+    </title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/src/image/logos/Logo_only.png"
+    />
+    <link rel="stylesheet" href="/styles/header.css" />
+    <link rel="stylesheet" href="/styles/footer.css" />
+    <link rel="stylesheet" href="/styles/product-detail.css" />
+    <!-- Font Awesome for the location icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <!-- Top Bar -->
+      <div class="head-area">
+        <div class="left-section">
+          <select class="currency-select">
+            <option value="usd">USD</option>
+            <option value="inr">Rupee</option>
+            <option value="eur">Euro</option>
+            <option value="yen">Yen</option>
+          </select>
+          <a
+            class="store"
+            href="https://www.google.com/maps/place/Abokichi/"
+            target="_blank"
+          >
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Store</span>
+          </a>
+        </div>
+        <div class="right-section">
+          <button>Login / Register</button>
+        </div>
+      </div>
+
+      <!-- Main Header -->
+      <div class="head-main">
+        <div class="head-left">
+          <a href="/templates/home.html"><div class="logo-sprite"></div></a>
+        </div>
+
+        <div class="head-center">
+          <div class="dropdown">
+            <button class="dropdown-btn">
+              Shop
+              <img
+                src="/src/image/logos/down-arrow.png"
+                alt="Dropdown Icon"
+                class="dropdown-icon"
+              />
+            </button>
+            <div class="dropdown-content">
+              <a href="#">Product 1</a>
+              <a href="#">Product 2</a>
+              <a href="#">Product 3</a>
+              <a href="#">Product 4</a>
+            </div>
+          </div>
+          <button>Our story</button>
+          <button>Recipes</button>
+          <button>Contact</button>
+        </div>
+
+        <div class="head-right">
+          <img
+            src="/src/image/logos/search-interface-symbol.png"
+            alt="Search Icon"
+          />
+          <img src="/src/image/logos/heart.png" alt="Heart Icon" />
+          <div class="cart-icon">
+            <img src="/src/image/logos/shopping-bag.png" alt="Cart Icon" />
+            <span id="cart-count">0</span>
+          </div>
+        </div>
+
+        <!-- Toggle Button (Right Side) -->
+        <button class="toggle-btn" onclick="toggleMenu()">
+          <img src="/src/image/logos/toggle.png" alt="Toggle Menu" />
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="mobile-menu" id="mobileMenu">
+        <div class="dropdown">
+          <button class="dropdown-btn">
+            Shop
+            <img
+              src="/src/image/logos/down-arrow.png"
+              alt="Dropdown Icon"
+              class="dropdown-icon"
+            />
+          </button>
+          <div class="dropdown-content">
+            <a href="#">Product 1</a>
+            <a href="#">Product 2</a>
+            <a href="#">Product 3</a>
+            <a href="#">Product 4</a>
+          </div>
+        </div>
+        <button>Our story</button>
+        <button>Recipes</button>
+        <button>Contact</button>
+        <div class="head-right">
+          <img
+            src="/src/image/logos/search-interface-symbol.png"
+            alt="Search Icon"
+          />
+          <img src="/src/image/logos/heart.png" alt="Heart Icon" />
+          <img src="/src/image/logos/shopping-bag.png" alt="Cart Icon" />
+        </div>
+      </div>
+    </header>
+
+    <!-- Main body content -->
+    <main>
+      <section class="detail-body">
+        <div class="breadcrumb raleway">
+          Shop
+          <img
+            src="/src/image/logos/next.png"
+            alt="Shop"
+            style="height: 16px; vertical-align: middle"
+          />
+          OKAZU Lovers Set (230ml/12 jars)
+        </div>
+
+        <div class="product-section">
+          <!-- Product Gallery -->
+          <div class="product-gallery">
+            <img
+              src="/src/image/products/OKAZU-lovers-set.webp"
+              class="main-image"
+              alt="Main Product"
+            />
+            <div class="thumbnail-row">
+              <div class="arrow">&#8249;</div>
+              <img
+                src="/src/image/products/OKAZU-lovers-set.webp"
+                alt="thumb1"
+              />
+              <img
+                src="/src/image/products/Chili_miso_250ml_1.webp"
+                alt="thumb2"
+              />
+              <img
+                src="/src/image/products/OKAZU-lovers-set.webp"
+                alt="thumb3"
+              />
+              <div class="arrow">&#8250;</div>
+            </div>
+          </div>
+
+          <!-- Product Details -->
+          <div class="product-details">
+            <div class="product-title raleway">
+              OKAZU Lovers Set (230ml/12 jars)
+            </div>
+            <div class="product-price">
+              $135.00 <del><i>$167.88</i></del>
+            </div>
+
+            <div class="stars">
+              <img src="/src/image/stars/full-star.png" alt="Star" />
+              <img src="/src/image/stars/full-star.png" alt="Star" />
+              <img src="/src/image/stars/full-star.png" alt="Star" />
+              <img src="/src/image/stars/full-star.png" alt="Star" />
+              <img src="/src/image/stars/full-star.png" alt="Star" />
+              <small>32 Reviews</small>
+            </div>
+
+            <div class="description">
+              <p>
+                Your new cooking BFF! You can add this to virtually everything.
+                Try it on rice, on meat or tofu, in your burger, ramen and
+                pretty much anything.
+              </p>
+            </div>
+
+            <div class="buttons">
+              <button class="add-to-cart" onclick="addToCart()">
+                ADD TO CART
+              </button>
+              <button class="buy-now" onclick="placeOrder()">Buy Now</button>
+            </div>
+
+            <!-- Order Placed Popup -->
+            <div id="orderPopup" class="popup-overlay">
+              <div class="popup-content">
+                <p>🎉 Order Placed Successfully!</p>
+                <button onclick="closePopup()">OK</button>
+              </div>
+            </div>
+
+            <!-- Canvas for Confetti -->
+            <canvas
+              id="confetti-canvas"
+              style="
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                pointer-events: none;
+                z-index: 1001;
+              "
+            ></canvas>
+
+            <div class="wishlist">
+              <img src="/src/image/logos/heart.png" alt="Wishlist" /> WISHLIST
+            </div>
+
+            <div class="share">
+              <span>SHARE:</span>
+              <img src="/src/image/logos/facebook-black.png" alt="Facebook" />
+              <img src="/src/image/logos/twitter-black.png" alt="Twitter" />
+              <img src="/src/image/logos/pinterest-black.png" alt="Pinterest" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="descriptive-content">
+        <div class="tab-container">
+          <div class="tabs">
+            <div class="tab active">DESCRIPTION</div>
+            <div class="tab">REVIEWS</div>
+            <div class="tab">VIDEOS</div>
+            <div class="tab">COMMENTS</div>
+          </div>
+
+          <div class="tab-content">
+            <p>
+              Your new cooking BFF! You can add this to virtually everything.
+              Try it on rice, on meat or tofu, in your burger, ramen and pretty
+              much anything. These award winning products will have your taste
+              buds lingering for more...and potentially create an addiction.
+              <br />
+              Chili OKAZU is an umami-rich chili, miso, and sesame oil based
+              condiment often eaten with rice in Japan, which can also be used
+              to top chicken, burgers, fish, eggs, potatoes, and more. <br />
+              Use it as a marinade or as an ingredient in your own homemade
+              salad dressing, this condiment is versatile and we encourage you
+              to experiment. <br />
+              OKAZU gained an initial following at farmers' markets in Toronto
+              and has been featured in The Toronto Star, The National Post,
+              Toronto Life, FoodiePages and a winner of the Foodie Pick Awards.
+            </p>
+
+            <p><strong>HEAT LEVEL:</strong> MILD-MEDIUM</p>
+
+            <p>
+              <strong>INGREDIENTS:</strong> SUNFLOWER OIL, SESAME OIL, GARLIC,
+              MISO PASTE (ORGANIC SOYBEANS, RICE, SALT), TAMARI SOY SAUCE
+              (NON-GMO SOYBEANS, SALT, SUGAR), CHILI POWDER, WHITE SESAME SEEDS
+            </p>
+
+            <p>
+              <strong>CHILI & SPICY OKAZU CONTAINS:</strong> SESAME, SOYBEANS.
+              MAY CONTAIN: MUSTARD.
+            </p>
+
+            <p>
+              <strong>CURRY OKAZU CONTAINS:</strong> SESAME, SOYBEANS, MUSTARD.
+            </p>
+
+            <p style="padding-bottom: 30px; margin: 0">
+              <strong>INGREDIENTS:</strong><br />
+              PRODUCT SEPARATION IS NORMAL. REFRIGERATE AFTER OPENING
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer Section -->
+    <footer class="footer-container">
+      <!-- Left Section -->
+      <div class="footer-left">
+        <div class="footer-links">
+          <p class="footer-heading">LINKS</p>
+          <ul class="footer-list">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Customer Service</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Sitemap</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-info">
+          <p class="footer-heading">INFORMATION</p>
+          <ul class="footer-list">
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Refund Policy</a></li>
+            <li><a href="#">Press</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Right Section -->
+      <div class="footer-right">
+        <div class="payment-icons">
+          <img
+            src="/src/image/logos/visa.png"
+            alt="Visa"
+            class="payment-icon"
+          />
+          <img
+            src="/src/image/logos/mastercard.webp"
+            alt="MasterCard"
+            class="payment-icon"
+          />
+          <img
+            src="/src/image/logos/apple-pay.png"
+            alt="Apple Pay"
+            class="payment-icon"
+          />
+          <img
+            src="/src/image/logos/american.png"
+            alt="American Express"
+            class="payment-icon"
+          />
+        </div>
+      </div>
+
+      <!-- Footer bottom section -->
+      <div class="footer-bottom">
+        <div class="footer-left-icons">
+          <img src="/src/image/logos/facebook.png" alt="Facebook" />
+          <img src="/src/image/logos/twitter.png" alt="Twitter" />
+          <img src="/src/image/logos/instagram.png" alt="Instagram" />
+          <img id="youtube" src="/src/image/logos/youtube.png" alt="YouTube" />
+          <img src="/src/image/logos/pinterest.png" alt="Pinterest" />
+          <img src="/src/image/logos/linkedin.png" alt="LinkedIn" />
+        </div>
+        <div class="footer-right-copy">
+          <img
+            src="/src/image/logos/copyright.png"
+            alt="Copyright"
+            class="copy-icon"
+          />
+          <span>2021 Abokichi.</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/scripts/products.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <script src="/scripts/home.js"></script>
+  </body>
+</html>
